@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.4.6.71 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC" Description="Manages ST service channel">ST_Main</Object>
+    <Object Type="Program" Language="IEC" Description="Accepts commands from gSuperTrak. Manages System, Section, and Pallet function blocks">ST_Logic</Object>
+    <Object Type="Program" Language="IEC">ST_Visu</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.6.4.67?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="5LS182.6-2" Type="5LS182.6-2" Version="1.3.1.0">
+    <Connection Connector="SL" TargetModule="PC" TargetConnector="SL4" />
+  </Module>
+  <Module Name="PC" Type="PC_any" Version="1.1.0.0" OrderNumber="PC">
+    <Connector Name="IF3">
+      <Parameter ID="InaPort" Value="11159" />
+    </Connector>
+    <Parameter ID="ConfigurationID" Value="SuperTrak_Core_Simulation" />
+    <Parameter ID="VolatileGlobalPvSize" Value="131070" />
+    <Parameter ID="SystemTick" Value="400" />
+    <Parameter ID="TaskClassIdleTime" Value="400" />
+    <Parameter ID="Cyclic1Duration" Value="800" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic1Stack" Value="65535" />
+    <Parameter ID="Cyclic1Output" Value="1" />
+    <Parameter ID="Cyclic2Duration" Value="800" />
+    <Parameter ID="Cyclic2Tolerance" Value="0" />
+    <Parameter ID="Cyclic2Stack" Value="65535" />
+    <Parameter ID="Cyclic3Duration" Value="50000" />
+    <Parameter ID="Cyclic8Duration" Value="800" />
+    <Parameter ID="Cyclic8Tolerance" Value="0" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="USER" />
+    <Parameter ID="FileDevicePath1" Value="../../../../Logical/ConfigFiles" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="br" />
+    <Parameter ID="FtpUserPassword1" Value="QMhL/dtrmhlR40mhXiUTZRHGDCdjSPoAwBd7aMiCRQw=" />
+    <Parameter ID="FtpUserSalt1" Value="/GvO8l4J" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="WebServerWebDir" Value="C:\web\" />
+    <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
+  </Module>
+</Hardware>

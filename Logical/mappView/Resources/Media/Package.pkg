@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.2.102?>
+<Package SubType="MediaPackage" PackageType="MediaPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Wireframe glowing ST for Splash page">SuperTrakSplash2.png</Object>
+    <Object Type="File" Description="Loading animation for Splash page">ST_Loading.gif</Object>
+    <Object Type="File">Loading.png</Object>
+    <Object Type="File">favicon.png</Object>
+    <Object Type="File">AnimWidget.html</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,9 @@
+VAR
+	MainState : MainState_enum;
+	index : UINT;
+	targetTimer : ARRAY[0..20] OF TON;
+	systemAccel : UINT := 0;
+	systemVelo : UINT := 0;
+	nextTarget : USINT;
+	blueZoneClear : BOOL;
+END_VAR

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.4.4.108?>
+<Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Page description">MainPage.page</Object>
+    <Object Type="File" Description="Top status bar">HeaderBar.content</Object>
+    <Object Type="File">SystemOverview.content</Object>
+    <Object Type="File" Description="Left side of screen. Includes ST widget">SystemControl.content</Object>
+    <Object Type="File">SectionStatus.content</Object>
+    <Object Type="File" Description="Right side of screen. Includes options flyouts">Options.content</Object>
+    <Object Type="File" Description="Bottom right side. Includes Data Monitor">DataMonitor.content</Object>
+    <Object Type="File">Background.content</Object>
+  </Objects>
+</Package>

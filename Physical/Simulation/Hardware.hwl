@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <TimeStamps>
+    <TimeStamp LogicalPath="Simulation.Hardware.hw" LastWriteTime="12/18/2019 17:02:35" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="PC" Type="PC_any" X="100" Y="100" />
+    <Module Name="5LS182.6-2" Type="5LS182.6-2" X="418" Y="149" />
+  </Modules>
+  <Links />
+  <InfoElements />
+</BR.AS.HardwareTopology>

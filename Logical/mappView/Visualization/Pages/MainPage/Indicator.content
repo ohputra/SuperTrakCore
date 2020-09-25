@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Indicator" height="360" width="960" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="20" left="10" width="930" height="320" zIndex="0" borderStyle="solid" borderWidth="60px 2px 2px 2px" lineColor="rgba(40, 40, 45, 1)" backColor="rgba(30, 30, 35, 1)" shadow="none" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="30" left="20" width="410" height="40" zIndex="1" text="Data Monitor" backColor="rgba(255, 255, 255, 0)" textColor="rgba(128, 128, 128, 1)" textAlign="left" fontName="consolas" fontSize="28px" bold="false" />
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart1" top="90" left="0" width="940" height="250" zIndex="2" chartMargin="5px" showGrid="false" backColor="rgba(255, 255, 255, 0)" chartColor="rgba(255, 255, 255, 0)" chartBorderColor="rgba(255, 255, 255, 0)" fontName="consolas" borderStyle="none">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis1" width="60" zIndex="0" axisColor="rgba(128, 128, 128, 1)">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph1" zIndex="0" maxValue="120" xAxisRefId="OnlineChartTimeAxis1" lineColor="rgba(187, 255, 0, 1)" lineWidth="1px" fillColor="rgba(40, 40, 45, 1)" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis1" height="30" zIndex="1" axisColor="rgba(128, 128, 128, 1)">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

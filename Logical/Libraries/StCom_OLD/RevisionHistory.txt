@@ -1,0 +1,171 @@
+-----------------------------------------------------------------------------------------------------------
+Versioning:
+
+V X.XX.X
+  | || |
+  | || `--- 0...8 	Guaranteed compatible changes (e.g. small bug fixes).
+  |	||		9		Test version, only for unofficial test purposes.
+  | ||
+  | |`----- 0...9	Guaranteed compatible changes (e.g. small bug fixes, functional extensions).
+  | |
+  | `------ 0...9	Changes my be incompatible (Please read release information).
+  |
+  `-------- 0		Versions prior to first official release.
+  			1...9	Changes my be incompatible (Please read release information).
+
+-----------------------------------------------------------------------------------------------------------	
+-----------------------------------------------------------------------------------------------------------	
+
+Revision Information:
+
+-----------------------------------------------------------------------------------------------------------
+O	V2.20.0:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	- Version requires SuperTrak library 0.04.0 or higher
+	
+	Bugfix:
+	
+	- Changed error handling
+	- WriteLogbookEntry call when error occurres
+	- Check for active StControl during runtime
+	- Reset CommandDone in StTargetExt, StPallet and StAdvCmd when command is resetted
+
+-----------------------------------------------------------------------------------------------------------
+O	V2.12.3:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	
+	Bugfix:
+	
+	- Changed factor for writing Moving filter
+	- Check for NULL - pointers during FUB enabled
+
+-----------------------------------------------------------------------------------------------------------
+O	V2.12.2:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	
+	New Functionality:
+	
+	- Extended and improved internal information flow
+
+-----------------------------------------------------------------------------------------------------------
+O	V2.12.1:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	
+	Bugfix:
+	
+	- Multiple read pnu commands lead to overflow of internal sequence, which resulted in a handshaking
+	  problem
+
+-----------------------------------------------------------------------------------------------------------
+O	V2.12.0:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	
+	Bugfix:
+	
+	- Some commands were set too early after the previous command was cleared, when using StCom on a
+	  separate controller with latencies in the communication to SuperTrak
+
+-----------------------------------------------------------------------------------------------------------
+O	V2.11.0:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	
+	Bugfix:
+	
+	- When sending multiple commands at once, the command success and command complete bit where read
+	  from the wrong array entry (array index), which caused the command not being executed
+	
+-----------------------------------------------------------------------------------------------------------
+O	V2.10.0:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	
+	New Functionality:
+	
+	- New function block to execute custom commands
+	- Increased maximum possible number of funciton blocks from 256 to 1024 to accomodate big SuperTrak systems
+	- Added LocatingPallets and DisabledExternally outputs to StSection
+	- Added palletovertarget output to StTarget and StTargetExt
+	
+	Bugfix:
+	
+	- Reset of internal state-machines not working when disabling FB
+	- Acknowledgement of faults on sections was not possible with StSection due to recent change of not reporting an error, if SuperTrak reports a section fault
+	- New advanced commands didn't check if the previous command was reset already. This caused issues when running the FBs in a lower cycle class as ST_Main
+	- Commands were cleared as soon as acknowledged from SuperTrak. This caused the palletPresent bit to turn back true when the next pallet arrived.
+	  This behaviour is not wanted. The PalletPresent should stay false until the command was reset on the FB.
+
+-----------------------------------------------------------------------------------------------------------
+O	V2.00.0:
+
+	General Information:
+	
+	- Version is only compatible with SuperTrak SW version greater or equal V 2.99.0.68
+	- Service Channel requires function call on SuperTrak controller ('SuperTrakServiceChannel()')!
+	- Service Channel implemenation requires additional inputs on StControl FB. Please add before changing
+	  to the new version of StCom
+	- The info structure of StControl has changed, please review the data types in the application before
+	  updating to the new version of StCom
+	
+	New Functionality:
+	
+	- Service Channel implementation (StReadPnu, StWritePnu)
+	- Automatic enable of communication interface index 0
+	- Automatic configuration of communication structure via Service Channel
+	- Reading of system fault and warning information (published in .info strucutre of StControl and in logger)
+	- Reading of section fault and warning information (published in .info strucutre of StSection and in logger)
+	- Reading of system information (e.g. system name)
+	- Release of pallets during motion (via StPallet)
+	- Log book is now persistant (won't get deleted after warm or cold restart)
+	
+	Bugfix:
+	
+	- Adjusted maxumum size of internal variables to match maximum SuperTrak system size
+	- Fixed compatability issue with newest SuperTrak SW version (data alignment had changed)
+	- Fixed issue with existing log book at FB enable (ident was not valid anymore)
+	- Fixes issue causing another execution of a command if FB returned an error, the command wasn't set to FALSE
+	  and the error was reset. Problem occured in the following FBs:
+		StPallet
+		StTarget
+		StTargetExt
+		
+-----------------------------------------------------------------------------------------------------------
+O	V1.02.0:
+
+	Bugfixes:
+	
+	- Controller gain was implemented as REAL, but it's an Index from a table		
+	
+-----------------------------------------------------------------------------------------------------------
+O	V1.01.0:
+
+	Bugfixes:
+	
+	- Maximum acceleration was limited to 10 m/s^2 instead of 4 m/s^2
+
+-----------------------------------------------------------------------------------------------------------
+O	V1.00.0:
+
+	General Information:
+
+	- First released version
+	- Compatible only with AR 4.24 or greater

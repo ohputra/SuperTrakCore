@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="SystemOverview" height="600" width="930" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="0" left="0" width="930" height="600" zIndex="0" borderStyle="solid" borderWidth="60px 2px 2px 2px" lineColor="rgba(40, 40, 45, 1)" backColor="rgba(30, 30, 35, 1)" shadow="none" backGroundGradient="none" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="0" left="20" width="420" height="60" zIndex="1" text="System Overview" backColor="rgba(255, 255, 255, 0)" textColor="rgba(128, 128, 128, 1)" textAlign="left" fontName="consolas" fontSize="28px" bold="false" style="ContainerName" />
+    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="2" x1="180" x2="180" y1="180" y2="180" lineColor="rgba(255, 119, 0, 1)" lineWidth="10px" lineCap="butt" />
+    <Widget xsi:type="widgets.brease.WebViewer" id="WebViewer1" top="60" left="0" width="930" height="540" zIndex="3" path="BRVisu/Media/AnimWidget.html" port="81" borderColor="rgba(255, 255, 255, 0)" borderStyle="none" borderWidth="0px" />
+  </Widgets>
+</Content>

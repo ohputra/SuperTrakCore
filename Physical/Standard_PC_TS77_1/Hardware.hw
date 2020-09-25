@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.6.3.55?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="5AC901.BX02-01" Type="5AC901.BX02-01" Version="1.1.1.0">
+    <Connection Connector="SY" TargetModule="5PC910.SX02-00" TargetConnector="SY3" />
+  </Module>
+  <Module Name="5ACPCE.FMIO-K01" Type="5ACPCE.FMIO-K01" Version="1.0.6.0">
+    <Connection Connector="SL" TargetModule="5AC901.BX02-01" TargetConnector="SL1" />
+  </Module>
+  <Module Name="5LS182.6-2" Type="5LS182.6-2" Version="1.3.1.0">
+    <Connection Connector="SL" TargetModule="5AC901.BX02-01" TargetConnector="SL2" />
+    <Connector Name="IF1">
+      <Parameter ID="CycleTime" Value="400" />
+    </Connector>
+  </Module>
+  <Module Name="5PC900_TS77_04" Type="5PC900.TS77-04" Version="2.0.0.0">
+    <Connection Connector="SY" TargetModule="5PC910.SX02-00" TargetConnector="SY1" />
+    <Parameter ID="ConfigurationID" Value="SuperTrak_Core_Standard_PC_TS77_04" />
+    <Parameter ID="UserPartitionSize" Value="200" />
+    <Parameter ID="RemMemDevice" Value="PCI.2.LS182.SRAM" />
+    <Parameter ID="RemMemSize" Value="500" />
+    <Parameter ID="SystemTick" Value="400" />
+    <Parameter ID="TaskClassIdleTime" Value="400" />
+    <Parameter ID="Cyclic1Duration" Value="800" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic1Output" Value="1" />
+    <Parameter ID="Cyclic2Duration" Value="800" />
+    <Parameter ID="Cyclic2Tolerance" Value="0" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="USER" />
+    <Parameter ID="FileDevicePath1" Value="F:\SuperTrakCore" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="br" />
+    <Parameter ID="FtpUserPassword1" Value="WcK/x6vgpRURITa0IoUtKo9v6R/fBL8dK5K21ruWyPI=" />
+    <Parameter ID="FtpUserSalt1" Value="AV6KF4Bt" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
+  </Module>
+  <Module Name="5PC910.SX02-00" Type="5PC910.SX02-00" Version="2.0.1.0">
+    <Connector Name="IF1">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF3">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="10.11.10.50" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+    </Connector>
+    <Connector Name="IF4">
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="10.1.10.11" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+    </Connector>
+    <Connector Name="IF5">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF6">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF7">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF8">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF9">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+  </Module>
+</Hardware>

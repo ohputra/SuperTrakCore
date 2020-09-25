@@ -1,0 +1,7 @@
+(*
+Copyright ATS Automation Tooling Systems, Inc. 2016-2017
+All rights reserved.
+*)
+VAR CONSTANT
+	DEVICE_TYPE_SUPERTRAK_G3 : DINT := 16#0A755793;
+END_VAR

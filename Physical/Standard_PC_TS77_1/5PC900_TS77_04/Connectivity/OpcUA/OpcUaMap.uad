@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="4" ArVersion="B4.45">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x015F" />
+      </ACL>
+      <ACL Id="2">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x01FF" />
+      </ACL>
+      <ACL Id="3">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x0117" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="2">
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables>
+        <Variable Name="gSuperTrak" AutomaticEnable="True">
+          <Variable AclId="3" AclInherit="2" Name="Status">
+            <Variable Name="Section" EnableArrayElements="True">
+              <Variable Name="Section[1]">
+                <Variable Name="Right">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+                <Variable Name="Left">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+              </Variable>
+              <Variable Name="Section[2]">
+                <Variable Name="Right">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+                <Variable Name="Left">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+              </Variable>
+              <Variable Name="Section[3]">
+                <Variable Name="Right">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+                <Variable Name="Left">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+              </Variable>
+              <Variable Name="Section[4]">
+                <Variable Name="Right">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+                <Variable Name="Left">
+                  <Variable Name="MotorTemp" EnableArrayElements="True" />
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="Pallet" EnableArrayElements="True" />
+          </Variable>
+        </Variable>
+        <Variable Name="testString" />
+      </GlobalVariables>
+      <Task Name="MainCtrl">
+        <Variable Name="graphOutput" />
+      </Task>
+      <Task Name="ST_Visu">
+        <Variable Name="WidgetData">
+          <Variable Name="SectionCount" />
+          <Variable Name="ShuttleCount" />
+          <Variable Name="ShuttlePos" />
+          <Variable Name="TargetPos" />
+          <Variable Name="TargetCount" />
+        </Variable>
+        <Variable Name="dataProviderPallet" EnableArrayElements="True" />
+        <Variable Name="dataProviderSection" EnableArrayElements="True" />
+        <Variable Name="dataProviderTarget" EnableArrayElements="True" />
+        <Variable Name="palletStatusIndex" />
+        <Variable Name="sectionStatusIndex" />
+        <Variable Name="targetStatusIndex" />
+        <Variable Name="pPalletStatusRef">
+          <Variable Name="Section" />
+          <Variable Name="Position" />
+          <Variable Name="Velocity" />
+          <Variable Name="Acceleration" />
+        </Variable>
+        <Variable Name="pSectionStatusRef">
+          <Variable Name="Right">
+            <Variable Name="MotorTemp" />
+            <Variable Name="MotorVoltage" />
+            <Variable Name="ElectronicsTemp" />
+          </Variable>
+          <Variable Name="Left">
+            <Variable Name="MotorTemp" />
+            <Variable Name="MotorVoltage" />
+            <Variable Name="ElectronicsTemp" />
+          </Variable>
+        </Variable>
+        <Variable Name="pTargetStatusRef">
+          <Variable Name="PalletReleased" />
+          <Variable Name="PalletPreArrival" />
+          <Variable Name="PalletPresent" />
+        </Variable>
+      </Task>
+      <Task Name="ST_Main">
+        <Variable Name="mvCounter" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

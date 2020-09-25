@@ -1,0 +1,76 @@
+(************************************************************************************************************************************)
+(************************************************************************************************************************************)
+(************************************************************************************************************************************)
+(************************************************************************************************************************************)
+(*Function blocks*)
+VAR
+	StControl_0 : {REDUND_UNREPLICABLE} StControl; (*Function block to communicate to SuperTrak*)
+	StSection_ : {REDUND_UNREPLICABLE} ARRAY[0..CONFIG_ST_MAX_SECTIONS] OF StSection; (*Function blocks to control SuperTrak sections*)
+	StPallet_ : {REDUND_UNREPLICABLE} ARRAY[0..CONFIG_ST_MAX_PALLETS] OF StPallet;
+	StTargetExt_ : {REDUND_UNREPLICABLE} ARRAY[0..CONFIG_ST_MAX_TARGETS] OF StTargetExt; (*Function blocks to control SuperTrak targets*)
+END_VAR
+(************************************************************************************************************************************)
+(************************************************************************************************************************************)
+(*Function block parameters*)
+VAR
+	SuperTrakControlParameters : {REDUND_UNREPLICABLE} StControlParType; (*Parameters for StControl*)
+	SuperTrakPalletParameters : {REDUND_UNREPLICABLE} ARRAY[0..CONFIG_ST_MAX_PALLETS] OF StPalletParType;
+	SuperTrakSectionParameters : {REDUND_UNREPLICABLE} ARRAY[0..CONFIG_ST_MAX_SECTIONS] OF StSectionParType; (*Parameters for StSection*)
+	SuperTrakTargetParameters : {REDUND_UNREPLICABLE} ARRAY[0..CONFIG_ST_MAX_TARGETS] OF StTargetExtParType; (*Parameters for each StTargetExt*)
+END_VAR
+(************************************************************************************************************************************)
+(************************************************************************************************************************************)
+(*Other variables*)
+VAR
+	Index : {REDUND_UNREPLICABLE} USINT := 0; (*Index variable used in for loops*)
+	StTargetState : ARRAY[0..CONFIG_ST_MAX_TARGETS] OF USINT;
+	palletInfo : ARRAY[0..CONFIG_ST_MAX_PALLETS] OF SuperTrakPalletInfo_t;
+	StPalletState : ARRAY[0..CONFIG_ST_MAX_PALLETS] OF USINT;
+END_VAR
+(************************************************************************************************************************************)
+(************************************************************************************************************************************)
+(*Read / Write variables*)
+VAR
+	StWritePnu_0 : StWritePnu;
+	WritePnuPara : ARRAY[0..29] OF StWritePnuParType;
+	ReadPnuPara : ARRAY[0..29] OF StReadPnuParType;
+	StReadPnu_0 : StReadPnu;
+END_VAR
+VAR CONSTANT
+	stSTAT_TARGET_PAR_VALUES : UINT := 1650;
+	stSTAT_HARDWARE_SENSOR_VALUES : UINT := 1570;
+END_VAR
+VAR
+	CurrentReadSection : USINT := 1;
+	totalVelocity : REAL;
+	averageVelocity : REAL;
+	index : USINT;
+END_VAR
+VAR CONSTANT
+	stNUM_WRITE_GROUPS : USINT := 1;
+	stNUM_READ_GROUPS : USINT := 4;
+END_VAR
+VAR
+	WriteDataBuffer : ARRAY[0..stNUM_WRITE_GROUPS] OF Buffer_typ;
+	ReadDataBuffer : ARRAY[0..stNUM_READ_GROUPS] OF Buffer_typ;
+END_VAR
+VAR CONSTANT
+	stSTAT_SECTION_TYPE : UINT := 1082;
+	stSTAT_PALLET_DEST_TARGET : UINT := 1339;
+	stSTAT_TARGET_POS_VALUES : UINT := 1651;
+END_VAR
+VAR
+	nxt_adr : UDINT;
+	releaseModeTarget : ARRAY[0..CONFIG_ST_MAX_TARGETS] OF USINT;
+	releaseModePallet : ARRAY[0..CONFIG_ST_MAX_PALLETS] OF USINT;
+	result : UINT;
+	servChanResponseUINT : ARRAY[0..127] OF UINT;
+	targetPositions : ARRAY[0..63] OF DINT;
+	targetSections : ARRAY[0..127] OF UINT;
+	sectionTemperatures : ARRAY[0..127] OF UINT;
+	palletDestinations : ARRAY[0..127] OF UINT;
+	sectionTypes : ARRAY[0..127] OF UINT;
+	alphaEMA : REAL := 0.00004;
+	palletVelocities : ARRAY[0..127] OF INT;
+	palletAccelerations : ARRAY[0..127] OF UINT;
+END_VAR

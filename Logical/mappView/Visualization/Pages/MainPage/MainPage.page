@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="MainPage" layoutRefId="Quadrants">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="SystemOverview" areaRefId="TopLeft" />
+    <Assignment type="Content" baseContentRefId="SystemControl" areaRefId="BottomLeft" />
+    <Assignment type="Content" baseContentRefId="Options" areaRefId="TopRight" />
+    <Assignment type="Content" baseContentRefId="DataMonitor" areaRefId="BottomRight" />
+    <Assignment type="Content" baseContentRefId="SectionStatus" areaRefId="Scroll" />
+    <Assignment type="Content" baseContentRefId="HeaderBar" areaRefId="HeaderBar" backColor="rgba(40, 40, 45, 1)"  />
+    <Assignment type="Content" baseContentRefId="Background" areaRefId="All" backColor="rgba(20, 20, 25, 1)" />
+  </Assignments>
+</pdef:Page>

@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="binding_0" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+  
+<Binding mode="twoWay">
+<Source xsi:type="session" refId="progressbar" attribute="value" />
+<Target xsi:type="brease" contentRefId="Splash" widgetRefId="ProgressBar1" attribute="value" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Cmds.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Cmds.Start" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton3" attribute="value" />
+</Binding>
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.UnrecPallPresent" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton12" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.MotorPowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton13" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.PalletsRecovering" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton14" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.LocatingPallets" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton15" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.DisabledExternally" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton16" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.UnrecPallPresent" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton17" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.MotorPowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton18" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.PalletsRecovering" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton19" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.LocatingPallets" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton20" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.DisabledExternally" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton21" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.UnrecPallPresent" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton22" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.MotorPowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton23" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.PalletsRecovering" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton24" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.LocatingPallets" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton25" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.DisabledExternally" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton26" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.UnrecPallPresent" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton27" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.MotorPowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton28" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.PalletsRecovering" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton29" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.LocatingPallets" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton30" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.DisabledExternally" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton31" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.Running" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.Ready" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton4" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainCtrl:ST_PathSVG" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="Paper1" attribute="svgContent" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainCtrl:ST_TransformSVG" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="Paper1" attribute="transform" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="mapp" refId="gAlarmXCore" attribute="link" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="AlarmList1" attribute="mpLink" />
+</Binding>
+
+
+
+
+
+
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Right.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Right.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Right.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Left.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Left.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Left.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Left.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Left.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Right.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar9" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Right.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar10" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Right.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar22" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Right.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar21" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Right.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar20" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Right.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar19" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Right.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar18" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Left.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar17" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Left.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar16" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Left.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar15" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Left.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar14" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Left.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar13" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Left.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar25" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Left.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar26" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Left.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar27" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Left.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar28" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Left.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar29" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Right.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar30" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Right.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar31" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Right.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar32" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Right.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar33" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Right.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar34" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Right.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar46" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Right.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar45" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Right.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar44" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Right.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar43" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Right.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar42" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Left.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar41" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Left.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar40" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Left.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar39" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Left.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar38" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Left.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar37" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Right.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar48" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Right.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar36" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Left.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar47" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Left.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar35" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Left.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar23" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Right.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar24" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Right.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar12" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Left.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Right.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Left.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Right.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Left.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Right.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Left.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider3" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Right.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Left.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="RadialSlider1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.WarningActive" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.FaultsActive" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.Enabled" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.Enabled" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton10" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.Enabled" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton9" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.Enabled" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="ToggleButton8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainCtrl:graphOutput" attribute="value" />
+<Target xsi:type="brease" contentRefId="Indicator" widgetRefId="OnlineChartGraph1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Cmds.ErrorReset" attribute="value" />
+<Target xsi:type="brease" contentRefId="Dashboard" widgetRefId="MomentaryPushButton1" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

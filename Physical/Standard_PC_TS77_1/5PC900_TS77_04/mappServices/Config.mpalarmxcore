@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Element ID="gAlarmXCore" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core">
+      <Group ID="Mapping">
+        <Group ID="[0]">
+          <Property ID="Alarm" Value="1" />
+          <Selector ID="[0]" />
+        </Group>
+      </Group>
+    </Group>
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="Fault_0" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Motor supply voltage out of range" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="Fault_4" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Excessive coil current" />
+        <Property ID="Code" Value="4" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Name" Value="Fault_5" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: High temperature" />
+        <Property ID="Code" Value="5" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Name" Value="Fault_7" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Gateway network error" />
+        <Property ID="Code" Value="7" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[4]">
+        <Property ID="Name" Value="Fault_8" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Excessive coil current (I2T)" />
+        <Property ID="Code" Value="8" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[5]">
+        <Property ID="Name" Value="Fault_9" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Coil(s) unresponsive; check connection" />
+        <Property ID="Code" Value="9" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[6]">
+        <Property ID="Name" Value="Fault_11" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Coil driver(s) shut down" />
+        <Property ID="Code" Value="11" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[7]">
+        <Property ID="Name" Value="Fault_14" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Encoder calibration required" />
+        <Property ID="Code" Value="14" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[8]">
+        <Property ID="Name" Value="Fault_15" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Excessive pallet following error" />
+        <Property ID="Code" Value="15" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[9]">
+        <Property ID="Name" Value="Fault_16" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Unrecognized pallet(s) detected" />
+        <Property ID="Code" Value="16" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[10]">
+        <Property ID="Name" Value="Fault_19" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Two pallets in collision deadlock" />
+        <Property ID="Code" Value="19" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[11]">
+        <Property ID="Name" Value="Fault_20" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Pallet lost position feedback" />
+        <Property ID="Code" Value="20" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[12]">
+        <Property ID="Name" Value="Fault_21" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Encoder read error" />
+        <Property ID="Code" Value="21" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[13]">
+        <Property ID="Name" Value="Fault_22" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Coil driver error" />
+        <Property ID="Code" Value="22" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[14]">
+        <Property ID="Name" Value="Fault_23" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Conflicting pallets detected" />
+        <Property ID="Code" Value="23" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[15]">
+        <Property ID="Name" Value="Fault_24" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: PLC interface heartbeat timeout" />
+        <Property ID="Code" Value="24" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[16]">
+        <Property ID="Name" Value="Fault_25" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Encoder communication error" />
+        <Property ID="Code" Value="25" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[17]">
+        <Property ID="Name" Value="Fault_26" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Disabled pallet arrived" />
+        <Property ID="Code" Value="26" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[18]">
+        <Property ID="Name" Value="Fault_27" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Abnormal condition detected" />
+        <Property ID="Code" Value="27" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[19]">
+        <Property ID="Name" Value="Fault_28" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Section disabled through configuration software" />
+        <Property ID="Code" Value="28" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[20]">
+        <Property ID="Name" Value="Fault_30" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Hardware initialization error" />
+        <Property ID="Code" Value="30" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[21]">
+        <Property ID="Name" Value="Fault_31" />
+        <Property ID="Message" Value="Fatal abnormal condition detected" />
+        <Property ID="Code" Value="31" />
+        <Selector ID="Behavior" Value="UserDefined">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="ActiveToInactive" Value="FALSE" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[22]">
+        <Property ID="Name" Value="Warning_1" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Application Warning" />
+        <Property ID="Code" Value="1" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[23]">
+        <Property ID="Name" Value="Warning_4" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Thermal sensor malfunction" />
+        <Property ID="Code" Value="4" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[24]">
+        <Property ID="Name" Value="Warning_5" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: High temperature" />
+        <Property ID="Code" Value="5" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[25]">
+        <Property ID="Name" Value="Warning_7" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Gateway network warning" />
+        <Property ID="Code" Value="7" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[26]">
+        <Property ID="Name" Value="Warning_8" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Excessive coil current (I2T)" />
+        <Property ID="Code" Value="8" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[27]">
+        <Property ID="Name" Value="Warning_9" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Coil(s) unresponsive; check connection" />
+        <Property ID="Code" Value="9" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[28]">
+        <Property ID="Name" Value="Warning_11" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Pallet position correction was required" />
+        <Property ID="Code" Value="11" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[29]">
+        <Property ID="Name" Value="Warning_12" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Pallet ID tag warning" />
+        <Property ID="Code" Value="12" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[30]">
+        <Property ID="Name" Value="Warning_13" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Duplicate Pallet ID" />
+        <Property ID="Code" Value="13" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[31]">
+        <Property ID="Name" Value="Warning_15" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Counts out of range during encoder handoff" />
+        <Property ID="Code" Value="15" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[32]">
+        <Property ID="Name" Value="Warning_16" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Consecutive encoder readings out of range" />
+        <Property ID="Code" Value="16" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[33]">
+        <Property ID="Name" Value="Warning_17" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Invalid region configuration" />
+        <Property ID="Code" Value="17" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[34]">
+        <Property ID="Name" Value="Warning_18" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Invalid parameter configuration" />
+        <Property ID="Code" Value="18" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[35]">
+        <Property ID="Name" Value="Warning_19" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Command failed" />
+        <Property ID="Code" Value="19" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[36]">
+        <Property ID="Name" Value="Warning_20" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Invalid sync zone configuration" />
+        <Property ID="Code" Value="20" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[37]">
+        <Property ID="Name" Value="Warning_21" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Encoder read warning" />
+        <Property ID="Code" Value="21" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[38]">
+        <Property ID="Name" Value="Warning_22" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Coil driver warning" />
+        <Property ID="Code" Value="22" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[39]">
+        <Property ID="Name" Value="Warning_23" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Parameter save required" />
+        <Property ID="Code" Value="23" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[40]">
+        <Property ID="Name" Value="Warning_24" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Pallet destination updated" />
+        <Property ID="Code" Value="24" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[41]">
+        <Property ID="Name" Value="Warning_25" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Encoder communication warning" />
+        <Property ID="Code" Value="25" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[42]">
+        <Property ID="Name" Value="Warning_26" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Disabled pallet arrived" />
+        <Property ID="Code" Value="26" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[43]">
+        <Property ID="Name" Value="Warning_27" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Too many pallets" />
+        <Property ID="Code" Value="27" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[44]">
+        <Property ID="Name" Value="Warning_29" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Excessive pallet settling time" />
+        <Property ID="Code" Value="29" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[45]">
+        <Property ID="Name" Value="Warning_30" />
+        <Property ID="Message" Value="{&amp;ReportingSections}: Controller health warning" />
+        <Property ID="Code" Value="30" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+      <Group ID="[46]">
+        <Property ID="Name" Value="Warning_31" />
+        <Property ID="Message" Value="Abnormal condition detected" />
+        <Property ID="Code" Value="31" />
+        <Selector ID="Behavior" Value="UserDefined" />
+      </Group>
+    </Group>
+    <Group ID="mapp.AlarmX.Core.Snippets">
+      <Group ID="[0]">
+        <Property ID="Key" Value="ReportingSections" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::Alarms:reportingSections" />
+        </Selector>
+      </Group>
+    </Group>
+  </Element>
+</Configuration>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.4.4.108?>
+<Package SubType="Layouts" PackageType="Layouts" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Page layout Main screen">Quadrants.layout</Object>
+    <Object Type="File">FullPage.layout</Object>
+  </Objects>
+</Package>

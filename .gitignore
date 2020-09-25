@@ -1,0 +1,6 @@
+*.log
+*.set
+*.isopen
+Binaries/
+Diagnosis/
+Temp/

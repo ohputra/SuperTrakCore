@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="BindingSectionStatus" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		
+		
+		
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.UnrecPallPresent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton12" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.MotorPowerOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton13" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.PalletsRecovering" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton14" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.LocatingPallets" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton15" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.DisabledExternally" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton16" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.UnrecPallPresent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton17" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.MotorPowerOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton18" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.PalletsRecovering" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton19" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.LocatingPallets" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton20" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.DisabledExternally" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton21" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.UnrecPallPresent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton22" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.MotorPowerOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton23" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.PalletsRecovering" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton24" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.LocatingPallets" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton25" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.DisabledExternally" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton26" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.UnrecPallPresent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton27" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.MotorPowerOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton28" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.PalletsRecovering" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton29" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.LocatingPallets" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton30" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.DisabledExternally" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton31" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[4].Diag.Enabled" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton11" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[3].Diag.Enabled" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton10" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[2].Diag.Enabled" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton9" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.Section[1].Diag.Enabled" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SectionStatus" widgetRefId="ToggleButton8" attribute="value" />
+		</Binding>
+		
+		
+		
+		
+  </Bindings>
+</BindingsSet>

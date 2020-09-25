@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.2.7.54 SP?>
+<Library Version="1.00.0" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>DevDetect.fun</File>
+    <File>DevDetect.typ</File>
+    <File>DevDetect.var</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="AsARCfg" />
+    <Dependency ObjectName="AsETH" />
+    <Dependency ObjectName="AsUDP" />
+    <Dependency ObjectName="AsArLog" />
+    <Dependency ObjectName="AsIOTime" />
+    <Dependency ObjectName="AsIecCon" />
+  </Dependencies>
+</Library>

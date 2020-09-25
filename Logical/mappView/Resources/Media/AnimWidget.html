@@ -1,0 +1,485 @@
+<html>
+
+<head>
+</head>
+
+<body bgcolor="#28282D" onLoad="init()">
+
+	<svg id="TrackWidget" width="100%" height="100%" />
+
+	<script type="text/javascript">
+		var xmlns = 'http://www.w3.org/2000/svg';
+
+		// Point WebViewer to:
+		// path:	BRVisu/Media/AnimWidget.html;
+		// port:	81;
+
+		function init() {
+
+			var trackdata = {
+				sectionCount: 0,
+				shuttleCount: 0,
+				targetCount: 0
+			}
+
+			var animdata = {
+				shuttlePos: [0],
+				targetPos: [0]
+			}
+
+
+			initTrack(trackdata);
+
+			var id_fast = setInterval(function() {
+				cyclic_fast(trackdata, animdata);
+			}, 100);
+			var id_slow = setInterval(function() {
+				cyclic_slow(trackdata, animdata);
+			}, 2000);
+
+		}
+
+		function cyclic_fast(trackdata, animdata) {
+
+			animate_fast(trackdata, animdata);
+
+		}
+
+		function cyclic_slow(trackdata, animdata) {
+
+			animate_slow(trackdata, animdata);
+
+		}
+
+		//------------------------------------------------------------------------------------------
+		function readOPC_UA() {
+			parent.brease.services.opcua.read([{
+				"nodeId": "::TaskName:VarName",
+				"attributeId":13
+			}]).done(
+				function(value) {
+					myJSvar = value.results["0"].value;
+				},
+				function() {});
+		}
+
+
+
+		function initTrack(trackdata) {
+
+			var t0 = performance.now();
+
+			parent.brease.services.opcua.read([{
+				"nodeId": "::ST_Visu:WidgetData.SectionCount",
+				"attributeId": 13
+			}]).done(
+				function(value) {
+					trackdata.sectionCount = value.results["0"].value;
+					setupSVG(trackdata);
+					addPath(trackdata);
+					addPoints(trackdata);
+					addTargets(trackdata);
+				},
+				function() {});
+
+			parent.brease.services.opcua.read([{
+				"nodeId": "::ST_Visu:WidgetData.ShuttleCount",
+				"attributeId": 13
+			}]).done(
+				function(value) {
+					trackdata.shuttleCount = value.results["0"].value;
+					addShuttles(trackdata);
+				},
+				function() {});
+
+			parent.brease.services.opcua.read([{
+				"nodeId": "::ST_Visu:WidgetData.TargetCount",
+				"attributeId": 13
+			}]).done(
+				function(value) {
+					trackdata.targetCount = value.results["0"].value;
+					addTargets(trackdata);
+
+					console.log('Detected ' + String(trackdata.targetCount) + ' Targets');
+				}
+			)
+
+			var t1 = performance.now();
+		}
+
+
+		//------------------------------------------------------------------------------------------
+
+
+		function animate_fast(trackdata, animdata) {
+
+			parent.brease.services.opcua.read([{
+				"nodeId": "::ST_Visu:WidgetData.ShuttlePos",
+				"attributeId": 13
+			}]).done(
+				function(value) {
+
+					for (var i = 0; i < trackdata.shuttleCount; i++) {
+						animdata.shuttlePos[i + 1] = value.results["0"].value[i + 1];
+					}
+
+					animateShuttles(trackdata, animdata);
+
+				},
+				function() {});
+
+		}
+
+
+		function animate_slow(trackdata, animdata) {
+
+			parent.brease.services.opcua.read([{
+				"nodeId": "::ST_Visu:WidgetData.TargetPos",
+				"attributeId": 13
+			}]).done(
+				function(value) {
+
+					for (var i = 0; i < trackdata.targetCount; i++) {
+						animdata.targetPos[i + 1] = value.results["0"].value[i + 1];
+					}
+
+					animateTargets(trackdata, animdata);
+
+				},
+				function() {});
+		}
+
+
+		//------------------------------------------------------------------------------------------
+
+
+
+
+
+		function setupSVG(trackdata) {
+
+			var svg = document.getElementById("TrackWidget");
+
+			var svgwidth = String(trackdata.sectionCount * 500);
+			var svgheight = String(1500);
+			var svgdimensions = "0 0 " + svgwidth + " " + svgheight;
+
+			console.log('SVG Width set to ' + svgwidth);
+
+			svg.setAttributeNS(null, "viewBox", svgdimensions);
+		}
+
+
+
+
+
+
+
+
+
+		function addPath(trackdata) {
+
+			var svg = document.getElementById('TrackWidget');
+			var trackPath = document.createElementNS(xmlns, 'path');
+
+			var bottomStraight = 'M500,1000';
+			for (i = 1; i <= ((trackdata.sectionCount / 2) - 1); i++) {
+				var nextPoint = 'L' + String((i * 1000) + 500) + ',1000';
+				bottomStraight += nextPoint;
+			}
+
+			var rightCurve = 'C' + String(trackdata.sectionCount * 500) + ',1000 ' +
+				String(trackdata.sectionCount * 500) + ',500 ' +
+				String(trackdata.sectionCount * 500 - 500) + ',500 ';
+
+			var topStraight = '';
+			for (i = ((trackdata.sectionCount / 2) - 1); i >= 1; i--) {
+				nextPoint = 'L' + String((i * 1000) - 500) + ',500';
+				topStraight += nextPoint;
+			}
+
+			var leftCurve = 'C0,500 0,1000 500,1000';
+
+			var pathSTR = bottomStraight + rightCurve + topStraight + leftCurve;
+
+			trackPath.setAttributeNS(null, 'd', pathSTR);
+			trackPath.setAttributeNS(null, 'class', 'trackLine');
+			trackPath.setAttributeNS(null, 'id', 'trackPath');
+
+			svg.appendChild(trackPath);
+		}
+
+
+
+
+
+
+
+
+		function addPoints(trackdata) {
+
+			var svg = document.getElementById('TrackWidget');
+			var trackPoint = [];
+
+			for (i = 1; i <= (trackdata.sectionCount / 2); i++) {
+				trackPoint[i] = document.createElementNS(xmlns, 'circle');
+				trackPoint[i + 1] = document.createElementNS(xmlns, 'circle');
+
+				var x = String(i * 1000 - 500);
+
+				trackPoint[i].setAttributeNS(null, 'cx', x);
+				trackPoint[i + 1].setAttributeNS(null, 'cx', x);
+
+				trackPoint[i].setAttributeNS(null, 'cy', '500');
+				trackPoint[i + 1].setAttributeNS(null, 'cy', '1000');
+
+				trackPoint[i].setAttributeNS(null, 'class', 'trackPoint');
+				trackPoint[i + 1].setAttributeNS(null, 'class', 'trackPoint');
+
+				svg.appendChild(trackPoint[i]);
+				svg.appendChild(trackPoint[i + 1]);
+			}
+		}
+
+
+
+
+		function addTargets(trackdata) {
+
+			var svg = document.getElementById('TrackWidget');
+
+			for (var i = 0; i < trackdata.targetCount; i++) {
+
+				var group = document.createElementNS(xmlns, 'g');
+				group.setAttributeNS(null, 'id', 'targetGroup_' + String(i + 1));
+				group.setAttributeNS(null, 'class', 'targetGroup');
+				svg.appendChild(group);
+
+				var circle = document.createElementNS(xmlns, 'circle');
+				circle.setAttributeNS(null, 'class', 'targetLabel');
+				group.appendChild(circle);
+
+				var label = document.createElementNS(xmlns, 'text');
+				label.setAttributeNS(null, 'class', 'targetText');
+				label.setAttributeNS(null,'id','targetLabel_' + String(i+1));
+				label.textContent = 'T' + String(i + 1);
+				group.appendChild(label);
+
+				var bracket = document.createElementNS(xmlns, 'rect');
+				bracket.setAttributeNS(null, 'class', 'targetBracket');
+				bracket.setAttributeNS(null, 'y', '20');
+				bracket.setAttributeNS(null, 'width', '162');
+				bracket.setAttributeNS(null, 'height', '35');
+				bracket.setAttributeNS(null, 'transform', 'translate(-81,25)');
+				group.appendChild(bracket);
+			}
+		}
+
+
+
+
+		function addShuttles(trackdata) {
+
+			var svg = document.getElementById('TrackWidget');
+
+			for (var i = 0; i < trackdata.shuttleCount; i++) {
+
+				var shuttleTranslate = document.createElementNS(xmlns, 'g');
+				shuttleTranslate.setAttributeNS(null, 'id', 'shuttleTranslate_' + String(i + 1));
+				shuttleTranslate.setAttributeNS(null, 'class', 'shuttleTranslate');
+				svg.appendChild(shuttleTranslate);
+
+				var shuttleRotate = document.createElementNS(xmlns, 'g');
+				shuttleRotate.setAttributeNS(null, 'id', 'shuttleRotate_' + String(i + 1));
+				shuttleRotate.setAttributeNS(null, 'class', 'shuttleRotate');
+				shuttleTranslate.appendChild(shuttleRotate);
+
+				var shuttleOffset = document.createElementNS(xmlns, 'g');
+				shuttleOffset.setAttributeNS(null, 'id', 'shuttleOffset_' + String(i + 1));
+				shuttleOffset.setAttributeNS(null, 'class', 'shuttleOffset');
+				shuttleRotate.appendChild(shuttleOffset);
+
+				var shuttle = document.createElementNS(xmlns, 'rect');
+				shuttle.setAttributeNS(null, 'id', 'shuttle' + String(i + 1));
+				shuttle.setAttributeNS(null, 'class', 'shuttle');
+				shuttleOffset.appendChild(shuttle);
+
+			}
+
+		}
+
+
+
+
+
+
+
+
+		function calcTransformFromPath(shuttlePosition) {
+			var shuttleTransform;
+
+			shuttleTransform = trackPath.getPointAtLength(shuttlePosition);
+
+			var point1 = trackPath.getPointAtLength(shuttlePosition - 38);
+			var point2 = trackPath.getPointAtLength(shuttlePosition + 38);
+
+			// Calculate shuttle angle
+			if (point1.y > point2.y) {
+				shuttleTransform.angle = Math.atan((point2.x - point1.x) / -(point2.y - point1.y)) * (180 / Math.PI) - 90;
+			} else {
+				shuttleTransform.angle = Math.atan((point2.x - point1.x) / -(point2.y - point1.y)) * (180 / Math.PI) + 90;
+			}
+
+			return shuttleTransform;
+		}
+
+
+
+
+
+
+
+
+		function animateShuttles(trackdata, animdata) {
+			// calculate x,y,rotz positions for each shuttle
+			// draw shuttle at this position right now
+			// tween / animate transform
+
+			for (var i = 0; i < trackdata.shuttleCount; i++) {
+
+				var translation = document.getElementById('shuttleTranslate_' + String(i + 1));
+				var rotation = document.getElementById('shuttleRotate_' + String(i + 1));
+				var offsetion = document.getElementById('shuttleOffset_' + String(i + 1));
+
+				var transform = calcTransformFromPath(animdata.shuttlePos[i + 1]);
+
+				var translateSTR = 'translate(' + String(transform.x) +
+					',' + String(transform.y) + ')';
+
+				var rotateSTR = 'rotate(' + String(transform.angle) + ')';
+
+				var offsetSTR = 'translate(-76,50)';
+
+				translation.setAttributeNS(null, 'transform', translateSTR);
+				rotation.setAttributeNS(null, 'transform', rotateSTR);
+				offsetion.setAttributeNS(null, 'transform', offsetSTR);
+
+				// Force shuttle wrist-flip w/o doing a loop-de-loop
+				if (transform.y < 501) {
+					rotation.style.transitionDuration = '0ms';
+				} else {
+					rotation.style.transitionDuration = '100ms';
+				}
+
+			}
+		}
+
+
+
+
+		function animateTargets(trackdata,animdata) {
+
+			for (var i = 0; i < trackdata.targetCount; i++) {
+
+				var targetGroup = document.getElementById('targetGroup_' + String(i+1));
+				var targetLabel = document.getElementById('targetLabel_' + String(i+1));
+
+				var transform = calcTransformFromPath(animdata.targetPos[i + 1]);
+
+				var transformSTR = 'translate(' + String(transform.x) +
+					',' + String(transform.y) + ')' +
+					'rotate(' + String(transform.angle) + ')';
+
+				var rotateSTR = 'rotate(' + String( (-1 * transform.angle)) + ')';
+
+				targetGroup.setAttributeNS(null,'transform',transformSTR);
+				targetLabel.setAttributeNS(null,'transform',rotateSTR);
+
+
+			}
+		}
+
+
+
+
+	</script>
+
+	<style>
+		:root {}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.trackLine {
+			stroke: rgb(70, 70, 75);
+			stroke-width: 15;
+			fill: none;
+		}
+
+		.trackPoint {
+			r: 20;
+			fill: rgb(70, 70, 75, 1);
+			stroke: #28282D;
+			stroke-width: 10;
+		}
+
+		.sectionLabel {
+			text-anchor: middle;
+			alignment-baseline: central;
+			font-family: consolas;
+			font-size: 60;
+			fill: rgb(70, 70, 75);
+		}
+
+		.targetLabel {
+			r: 38;
+			stroke-width: 5;
+			fill: #28282D;
+			stroke: rgb(150, 150, 155);
+		}
+
+		.targetText {
+			text-anchor: middle;
+			alignment-baseline: central;
+			font-family: consolas;
+			font-size: 55;
+			fill: rgb(150, 150, 155);
+		}
+
+		.targetBracket {
+			stroke: rgb(150, 150, 155);
+			stroke-width: 10;
+			fill: transparent;
+			stroke-dasharray: 232, 162;
+			stroke-dashoffset: 35;
+		}
+
+		.shuttle {
+			fill: rgb(187, 255, 0);
+			width: 152;
+			height: 70;
+		}
+
+		.shuttleTranslate {
+			transition-property: transform;
+			transition-timing-function: linear;
+			transition-duration: 100ms;
+		}
+
+		.shuttleRotate {
+			transition-property: transform;
+			transition-timing-function: linear;
+			transition-duration: 100ms;
+		}
+
+		.shuttleOffset {}
+	</style>
+
+</body>
+
+</html>

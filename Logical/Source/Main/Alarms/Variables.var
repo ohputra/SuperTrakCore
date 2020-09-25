@@ -1,0 +1,18 @@
+VAR
+	MpAlarmXCore_0 : MpAlarmXCore;
+	MpAlarmXHistory_0 : MpAlarmXHistory;
+	MpAlarmXHistoryUI_0 : MpAlarmXHistoryUI;
+	MpAlarmXListUI_0 : MpAlarmXListUI;
+	MpAlarmHistoryUIConnect : MpAlarmXHistoryUIConnectType;
+	MpAlarmUIConnect : MpAlarmXListUIConnectType;
+	index : USINT;
+	alarmString : STRING[100];
+	nxt_adr : UDINT;
+	indexString : STRING[100];
+	reportingSections : STRING[100];
+	index2 : USINT;
+	sectionString : STRING[80];
+END_VAR
+VAR RETAIN
+	appendString : STRING[80];
+END_VAR

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="BindingSystemControl" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		
+		
+
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Cmds.Start" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SystemControl" widgetRefId="ToggleButton3" attribute="value" />
+		</Binding>
+
+
+		
+		
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.Running" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SystemControl" widgetRefId="ToggleButton5" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.Ready" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SystemControl" widgetRefId="ToggleButton4" attribute="value" />
+		</Binding>
+
+
+		
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.WarningActive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SystemControl" widgetRefId="ToggleButton7" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.FaultsActive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SystemControl" widgetRefId="ToggleButton6" attribute="value" />
+		</Binding>
+		
+		
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Cmds.ErrorReset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SystemControl" widgetRefId="MomentaryPushButton1" attribute="value" />
+		</Binding>
+
+		
+		
+  <Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Cmds.Enable" attribute="value" />
+<Target xsi:type="brease" contentRefId="SystemControl" widgetRefId="ToggleButton2" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.2.102?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">ST_3001.dat</Object>
+    <Object Type="File">ST_6001.dat</Object>
+    <Object Type="File">ST_2000.dat</Object>
+  </Objects>
+</Package>

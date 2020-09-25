@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="BindingMain" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+  
+<Binding mode="twoWay">
+<Source xsi:type="session" refId="progressbar" attribute="value" />
+<Target xsi:type="brease" contentRefId="Splash" widgetRefId="ProgressBar1" attribute="value" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.EMA_Throughput" attribute="value" />
+<Target xsi:type="brease" contentRefId="DataMonitor" widgetRefId="NumericOutput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="mapp" refId="gAlarmXCore" attribute="link" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="AlarmList1" attribute="mpLink" />
+</Binding>
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:dataProviderSection" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="DropDownBox1" attribute="dataProvider" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:dataProviderPallet" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="DropDownBox2" attribute="dataProvider" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:dataProviderTarget" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="DropDownBox3" attribute="dataProvider" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.ActivePallets" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="NumericOutput7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSuperTrak.Status.System.ActiveSections" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="NumericOutput8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:sectionStatusIndex" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="DropDownBox1" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:palletStatusIndex" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="DropDownBox2" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:targetStatusIndex" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="DropDownBox3" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Left.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Left.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Left.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Left.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Left.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Right.MotorTemp[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Right.MotorTemp[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Right.MotorTemp[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Right.MotorTemp[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge9" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Right.MotorTemp[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge10" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Left.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge12" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Left.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Right.MotorVoltage" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ProgressBar2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pSectionStatusRef.Right.ElectronicsTemp" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="LinearGauge13" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pPalletStatusRef.Acceleration" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="NumericOutput6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pPalletStatusRef.Velocity" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="NumericOutput5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pPalletStatusRef.Position" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="NumericOutput4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pPalletStatusRef.Section" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="NumericOutput3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pTargetStatusRef.PalletReleased" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ToggleButton6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pTargetStatusRef.PalletPresent" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ToggleButton5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ST_Visu:pTargetStatusRef.PalletPreArrival" attribute="value" />
+<Target xsi:type="brease" contentRefId="Options" widgetRefId="ToggleButton4" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

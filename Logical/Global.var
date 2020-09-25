@@ -1,0 +1,17 @@
+VAR
+	gStLink : StLinkType; (*StCom library communication variable*)
+	gStCyclicControlData : {REDUND_UNREPLICABLE} ARRAY[0..499] OF USINT := [500(0)]; (*Cyclic control buffer (to SuperTrak)*)
+	gStCyclicStatusData : {REDUND_UNREPLICABLE} ARRAY[0..499] OF USINT := [500(0)]; (*Cyclic status buffer (from SuperTrak)*)
+	gStServiceChannelReqData : {REDUND_UNREPLICABLE} ARRAY[0..127] OF USINT := [128(0)]; (*Service channel request buffer (to SuperTrak)*)
+	gStServiceChannelResData : {REDUND_UNREPLICABLE} ARRAY[0..127] OF USINT := [128(0)]; (*Service channel response buffer (from SuperTrak)*)
+END_VAR
+VAR CONSTANT
+	CONFIG_ST_MAX_SECTIONS : USINT := 4; (*Number of sections on the SuperTrak system*)
+	CONFIG_ST_MAX_PALLETS : USINT := 40; (*Maximum number of pallets on the SuperTrak system*)
+	CONFIG_ST_MAX_TARGETS : USINT := 40; (*Maximum number of targets on the SuperTrak system !!! MUST BE DIVISIBLE BY 4*)
+	CONFIG_ST_MAX_COMMANDS : USINT := 24; (*Maximum number of commands, which should be executed in parallel on the SuperTrak system*)
+END_VAR
+VAR
+	gSuperTrak : SysTrak_typ; (*Main control task for SuperTrak system*)
+	testString : STRING[200];
+END_VAR

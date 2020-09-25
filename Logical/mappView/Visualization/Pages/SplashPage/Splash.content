@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Splash" height="1080" width="1920" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="0" left="0" width="1920" height="1080" zIndex="0" image="Media/SuperTrakSplash2.png" shadow="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="899" left="819" width="260" height="149" zIndex="2" image="Media/ST_Loading.gif" />
+    <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar1" top="1077" left="0" width="1922" height="3" zIndex="1" showLabel="false" value="30" shadow="false" barBorderStyle="none" barBorderWidth="0px" barBorderColor="rgba(0, 0, 0, 0)" barCornerRadius="0px" barBackColor="rgba(64, 64, 64, 1)" barColor="rgba(255, 136, 0, 1)" borderStyle="none" borderWidth="0px" borderColor="rgba(0, 0, 0, 1)" cornerRadius="20px" backColor="rgba(255, 255, 255, 0)" fontName="Arial" fontSize="2px" fontColor="rgba(0, 0, 0, 1)" bold="false" />
+  </Widgets>
+</Content>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="StatusBar" height="100" width="1920" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="0" left="0" width="1920" height="100" zIndex="0" borderStyle="none" borderWidth="5px" lineColor="rgba(158, 0, 50, 1)" backColor="rgba(40, 40, 45, 1)" shadow="none" backGroundGradient="none" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="30" left="1849" width="41" height="41" zIndex="1" image="Media/SymbolLib/Edit/Help.svg" borderStyle="none" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="30" left="1790" width="41" height="41" zIndex="2" image="Media/SymbolLib/Alarm/Alarm.svg" borderStyle="none" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" />
+    <Widget xsi:type="widgets.brease.Image" id="Image3" top="30" left="1730" width="41" height="41" zIndex="3" image="Media/SymbolLib/Symbols/Remote4.svg" borderStyle="none" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" />
+    <Widget xsi:type="widgets.brease.Image" id="Image4" top="30" left="1670" width="41" height="41" zIndex="4" image="Media/SymbolLib/Communication/Network.svg" borderStyle="none" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" />
+    <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutput1" top="30" left="1230" width="420" height="40" zIndex="5" backColor="rgba(255, 255, 255, 0)" borderStyle="none" textColor="rgba(128, 128, 128, 1)" textAlign="right" fontName="consolas" fontSize="18px" bold="false" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="20" width="410" height="60" zIndex="6" text="SuperTrak Core" textColor="rgba(128, 128, 128, 1)" fontName="consolas" fontSize="40px" bold="false" />
+  </Widgets>
+</Content>
