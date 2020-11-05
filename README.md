@@ -22,16 +22,20 @@ A basic data structure **gSuperTrak** is provided to the user with commands and 
 Here's what that looks like:
 
 ```pascal
-IF gSuperTrak.Status.Target[1].PalletPresent THEN 	// If a pallet arrives at Target 1...
+// If a pallet arrives at Target 1...
+IF gSuperTrak.Status.Target[1].PalletPresent THEN
 
-	targetTimer[1].IN		:= TRUE;				// Then start a timer...
+	// Then start a timer...
+	targetTimer[1].IN		:= TRUE;
 
-	IF targetTimer[1].Q THEN						// When that timer completes...
+	// When the timer completes...
+	IF targetTimer[1].Q THEN
 		gSuperTrak.Par.Target[1].Config.Acceleration		:= systemAccel;
 		gSuperTrak.Par.Target[1].Config.Velocity			:= systemVelo;
 		gSuperTrak.Par.Target[1].Config.DestinationTarget	:= 2;
 		gSuperTrak.Par.Target[1].Config.Direction			:= stCOM_DIR_RIGHT;
-													// Set motion parameters and release the shuttle
+
+		// Configure motion parameters and release it...
 		gSuperTrak.Par.Target[1].ReleaseToTarget			:= TRUE;
 	END_IF;			
 ELSE
